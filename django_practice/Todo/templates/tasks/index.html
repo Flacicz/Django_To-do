@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список дел</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
+</head>
+<body>
+<h1>Список дел</h1>
+{% for item in tasks %}
+<div class="card">
+    <div class="card-header">
+        Задача {{ item.pk }}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ item.title }}</h5>
+        <p class="card-text">{{ item.desc }}</p>
+    </div>
+</div>
+{% endfor %}
+</body>
+</html>
